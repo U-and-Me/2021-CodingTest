@@ -1,9 +1,7 @@
 function solution(s){
-    var answer = true;
-    var count = 0;
+    let count = 0;
     
-    for(var i = 0; i < s.length; i++){
-        var ch = s.charAt(i);
+    for(let ch of s){
         
         if(ch == '(') count++;
         else count--;
@@ -11,8 +9,6 @@ function solution(s){
         if(count < 0) return false;
     }
     
-    if(count == 0) answer = true;
-    else answer = false;
-
-    return answer;
+    if(count == 0) return true;
+    else return false;
 }
